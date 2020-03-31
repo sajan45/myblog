@@ -1,0 +1,13 @@
+<% if ((post.original != false && !is_page() && theme.copyright) || post.original){ %>
+<div class="article_copyright">
+    <p><span class="copy-title">Post Title:</span><%= post.title %></p>
+    <%if(theme.word_count){%><p><span class="copy-title">Words:</span><span class="post-count"><%=wordcount(post.content) %></span></p><%}%>
+    <p><span class="copy-title">Author:</span><a  title="<%=config.author%>"><%=config.author%></a></p>
+    <p><span class="copy-title">Published Date:</span><%= post.date.format("YYYY-MM-DD, HH:mm:ss") %></p>
+    <p><span class="copy-title">Last Updated:</span><%= post.updated.format("YYYY-MM-DD, HH:mm:ss") %></p>
+    <span class="copy-title">Original Link:</span><a class="post-url" href="<%- url_for(post.path) %>" title="<%= post.title %>"><%= post.permalink %></a>
+    <p>
+        <span class="copy-title">Copyright Notice:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"Attribution-ShareAlike 4.0 International"</a> Please give appropriate credit when redistributing。
+    </p>
+</div>
+<% } %>
