@@ -1,7 +1,7 @@
 version: 1.0.1
 # 你的头像url
-avatar: /img/avatar.jpg
-favicon: /img/avatar.jpg
+avatar: /img/avatar.png
+favicon: /img/avatar.png
 
 #如果博客放置位置不是根目录，则可以通过配置此路径解决静态文件路径错误问题
 # 比如访问地址为 yelog.org/blog 那就需要配置为 blog_path: /blog 才能正常访问
@@ -83,14 +83,14 @@ bottom_text: ©2020 Sajan Sahu
 reward: false
 # true 开启打赏功能
 
-searchAll: false
-# true 启用全文搜索
-# 开启此功能需要下面操作：
-# 1. 在 hexo 根目录 执行 npm install hexo-generator-search --save 安装插件
-# 2. 在 hexo 根目录的 _config.xml 中添加下面内容
+searchAll: true
+# true enable full text search
+# The following operations are required to enable this function:
+# 1. Run npm install hexo-generator-search --save in the hexo root directory to install the plugin
+# 2. Add the following to _config.xml in the hexo root directory
 # search:
-#   path: search.xml
-#   field: post
+# path: search.xml
+# field: post
 
 
 copyright: true
@@ -104,7 +104,7 @@ word_count: false
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  on: true
+  on: false
   site_visit: true
   page_visit: true
 
